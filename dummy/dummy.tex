@@ -1,0 +1,86 @@
+%
+\documentclass[journal, draftcls, onecolumn]{IEEEtran} % draftcls, a4paper, onecolumn
+    
+    %\usepackage{skieeetrans}
+    
+    \begin{document}    
+    \title{Dummy Paper}   
+    \author{Shailesh~Kumar}
+
+    
+    
+    
+    % The paper headers
+    \markboth{}% Journal ...,~Vol.~..., No.~..., Month~Year
+    {Kumar \MakeLowercase{\textit{et al.}}: Header title}
+    
+    % make the title area
+    \maketitle
+    
+    % As a general rule, do not put math, special symbols or citations
+    % in the abstract or keywords.
+    \begin{abstract}
+    This is just a dummy paper to check the overall flow of GITHUB TRAVIS-CI integration.
+    \end{abstract}
+    
+    % Note that keywords are not normally used for peerreview papers.
+    \begin{IEEEkeywords}
+    Sparse representations, compressed sensing, 
+    k-ary detection, compressive detection, 
+    greedy pursuit, restricted isometry property.
+    \end{IEEEkeywords}
+    
+    
+    \IEEEpeerreviewmaketitle
+    
+    \section{Introduction}
+    
+    \cite{davenport2010signal}
+    
+    \section{Related work}
+    
+    
+    
+    \begin{appendices}
+    %\crefalias{section}{appsec}
+    
+    
+    \end{appendices}
+    
+    
+    % use section* for acknowledgement
+    \section*{Acknowledgment}
+    TBD.
+    
+    %The authors would like to thank...
+    
+    
+    % Can use something like this to put references on a page
+    % by themselves when using endfloat and the captionsoff option.
+    \ifCLASSOPTIONcaptionsoff
+      \newpage
+    \fi
+    
+    
+    
+    % trigger a \newpage just before the given reference
+    % number - used to balance the columns on the last page
+    % adjust value as needed - may need to be readjusted if
+    % the document is modified later
+    %\IEEEtriggeratref{8}
+    % The "triggered" command can be changed if desired:
+    %\IEEEtriggercmd{\enlargethispage{-5in}}
+    
+    % references section
+    \bibliographystyle{IEEEtran}
+    % argument is your BibTeX string definitions and bibliography database(s)
+    \bibliography{IEEEabrv,sksrrcs}
+    %
+    
+    
+    
+    
+    
+    % that's all folks
+    \end{document}
+    
