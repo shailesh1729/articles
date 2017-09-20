@@ -1,0 +1,76 @@
+
+% A flowchart consists of blocks and lines
+% We describe the shapes of various blocks
+
+
+\tikzset{
+sk-terminal/.style={rectangle, % The node will be drawn as a rectangle 
+  rounded corners=6pt,  % The corners will be rounded
+  minimum width=1.5cm, % Minimum width will be 3 cm
+  minimum height=.5cm,% Minimum height will be 1 cm
+  text centered, % Text would be centered inside the flow chart
+  draw=black, % The borders will be drawn with black color
+  fill=red!30 % The background color will be 30% red.
+},
+% Node style for input/output blocks in flow chart
+sk-io/.style={
+  tape,
+  % The shape will be a trapezium (in this case a parallelogram)
+  %trapezium,
+  % Angle of the left bottom corner
+  %trapezium left angle=80, 
+  %  Angle of the right bottom corner
+  %trapezium right angle=100, 
+  % Node 80 + 100 = 180 degrees. 
+  % This ensures a rectangular shape.
+  % Minimum width (depending on text inside it)
+  minimum width=3cm,
+  % Minimum height
+  minimum height=1cm, 
+  % Text inside it should be centered.
+  text centered, 
+  % Borders will be black color
+  draw=black, 
+  % Background will be 30% blue.
+  fill=blue!30!white,
+  %inner sep=0pt
+},
+% Node style for an intermediate processing node in a flow chart
+sk-process/.style= {
+  % Shape will be rectangle
+  rectangle,  
+  % Minimum width same for all types of blocks
+  minimum width=3cm,
+  % Minimum height same for all types of blocks
+  minimum height=1cm, 
+  % Text will be centered for all types of blocks
+  text centered, 
+  % Border color will be same for all types of blocks
+  draw=black,  
+  % Background color is orange 30%
+  fill=orange!30 
+},
+% A decision block in the flow chart
+sk-decision/.style={
+  % Shape will be diamond
+  diamond,  
+  % same as above
+  minimum width=3cm,  
+  % same as above
+  minimum height=1cm,  
+  text badly centered,  
+  draw=black,
+  % Background color will be green 30%.
+  fill=green!30, 
+  %inner sep=0pt,
+  aspect=3
+},
+sk-agent/.style={
+  draw, ellipse, 
+  fill=red!20!green!20, 
+  minimum height=1cm
+},
+sk-arrow/.style={
+  draw, thick, -latex'
+}
+}

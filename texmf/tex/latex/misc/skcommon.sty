@@ -1,0 +1,84 @@
+%\NeedsTeXFormat{LaTeX2e}
+%\ProvidesPackage{skcommon}[Common package for all Shailesh Kumar Articles]
+% Math support
+\usepackage{amsmath}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{dsfont}% math font package
+\usepackage{thmtools}%
+\usepackage{multirow}
+\usepackage{blkarray}
+% Graphics support
+\usepackage{graphicx}
+% Miscellaneous 
+\usepackage{comment}
+% Bibliography support
+\usepackage[square,numbers]{natbib}
+
+
+%  Graphics
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage[svgnames]{xcolor}
+\usepackage{tikz}
+\usepackage{pgfplots}
+% Disable backward compatibility mode of pgfplots.
+\pgfplotsset{compat=newest}
+\usepackage{pgfplotstable}
+\usepackage{pgf}
+\usepackage{subcaption}
+
+% Floats
+\usepackage{placeins}
+% for auto sized tables
+\usepackage{tabularx}
+
+% hyperref should be the last package which gets loaded
+\usepackage[pdftex, colorlinks, citecolor=blue, urlcolor=blue, bookmarksopen]{hyperref}
+\hypersetup{pdfstartview=}
+
+
+% Clever references
+\usepackage{cleveref}
+\crefname{appsec}{Appendix}{Appendices}
+\crefname{algocf}{algorithm}{algorithms}
+\Crefname{algocf}{Algorithm}{Algorithms}
+% Listings support
+\usepackage{listings}
+% Todo notes
+\usepackage[textsize=tiny,disable]{todonotes}
+% Enumerations
+\usepackage{enumitem}
+
+% Miscellaneous packages.
+\usepackage{accents}
+\usepackage{ifpdf}
+% URLs
+\usepackage{url}
+
+
+\usepackage{chngcntr}
+\usepackage{caption}
+\usepackage{ccicons}
+
+
+%\usepackage{parskip}
+% For programming support.
+\usepackage{etoolbox}
+% for defining new environments
+\usepackage{environ}
+
+%-----------------------Useful commands      ----------------------------------------------------
+% A horizontal rule
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+% A new term which is being defined.
+\newcommand{\term}{\textbf}
+% A program function name 
+\newcommand{\functionName}[1]{\textbf{#1}\\}
+% A new result developed by me
+\newcommand{\newresult}{\textcolor{red}{$\circledast$}}
+
+%------------------------------------------------------------------------------------------------
+
+%\endinput
+

@@ -1,0 +1,126 @@
+% equation numbers within section should be done before loading the cleverref package
+\numberwithin{equation}{section}
+% Additional packages for writing an article
+% Algorithms 
+\usepackage[ruled, norelsize]{algorithm2e}
+
+% H specifier is not allowed in two-column mode. This is the workaround for the same.
+\makeatletter
+\newcommand{\removelatexerror}{\let\@latex@error\@gobble}
+\makeatother
+
+%-----------------------------------------Theorems start ------------------------------------------
+
+\declaretheoremstyle[
+    headfont=\bfseries, 
+    notebraces={[}{]},
+    bodyfont=\normalfont,
+    headpunct={},
+    spacebelow=\parsep,
+    spaceabove=\parsep,
+]{skDefStyle}
+
+
+
+\declaretheoremstyle[
+    headfont=\bfseries, 
+    notebraces={[}{]},
+    bodyfont=\normalfont\itshape,
+    headpunct={},
+    %postheadspace=\newline,
+    %postheadhook={\textcolor{red}{\rule[.6ex]{\linewidth}{0.4pt}}\\},
+    %spacebelow=\parsep,
+    %spaceabove=\parsep
+]{skThmStyle}
+
+
+\declaretheoremstyle[
+    headfont=\bfseries, 
+    notebraces={[}{]},
+    bodyfont=\normalfont,
+    headpunct={},
+    %postheadspace=\newline,
+    %postheadhook={\textcolor{red}{\rule[.6ex]{\linewidth}{0.4pt}}\\},
+    spacebelow=\parsep,
+    spaceabove=\parsep,
+    postfoothook={\vspace{0.4cm}},
+    mdframed={
+        backgroundcolor=AliceBlue, 
+            linecolor=red!30,
+            skipabove=12pt, 
+            innertopmargin=12pt,
+            roundcorner=5pt,
+            outerlinewidth=1pt,
+            outerlinecolor=Plum, 
+            innerbottommargin=6pt, 
+            skipbelow=\parsep
+            } 
+]{myDefStyle}
+
+
+\declaretheoremstyle[
+    headfont=\bfseries, 
+    notebraces={[}{]},
+    bodyfont=\normalfont\itshape,
+    headpunct={},
+    %postheadspace=\newline,
+    %postheadhook={\textcolor{red}{\rule[.6ex]{\linewidth}{0.4pt}}\\},
+    postfoothook={\vspace{0.2cm}},
+    spacebelow=\parsep,
+    spaceabove=\parsep,
+    mdframed={
+        backgroundcolor=GhostWhite, 
+            linecolor=red!30,
+            skipabove=12pt, 
+            innertopmargin=12pt,
+            roundcorner=5pt,
+            outerlinewidth=1pt,
+            outerlinecolor=Plum, 
+            innerbottommargin=6pt, 
+            skipbelow=\parsep
+            } 
+]{myThmStyle}
+
+
+
+\declaretheorem[
+refname={axiom,axioms},
+Refname={Axiom,Axioms}
+]{axiom}
+
+\declaretheorem[
+style=myThmStyle,
+refname={theorem,theorems},
+Refname={Theorem,Theorems}
+]{theorem}
+
+% lemma will share the same counter as theorem
+\declaretheorem[sibling=theorem,
+style=myThmStyle,
+refname={lemma,lemmas},
+Refname={Lemma,Lemmas}
+]{lemma}
+
+\declaretheorem[sibling=theorem,
+style=skThmStyle,
+refname={proposition,propositions},
+Refname={Proposition,Propositions}
+]{proposition}
+
+\declaretheorem[sibling=theorem,
+style=skThmStyle,
+refname={corollary,corollaries},
+Refname={Corollary,Corollaries}]
+{corollary}
+
+
+\declaretheorem[
+style=myDefStyle,
+refname={definition,definitions},
+Refname={Definition,Definitions}]
+{definition}
+
+% Remark will share the same counter as theorem and lemma
+\declaretheorem[style=remark, numbered=no]{remark}
+
+%-----------------------------------------Theorems end ------------------------------------------

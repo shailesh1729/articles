@@ -1,0 +1,251 @@
+% Additional packages for writing a book
+\usepackage[boxed, algochapter, figure]{algorithm2e}
+\usepackage[nolist,nohyperlinks]{acronym}
+%\usepackage[acronym]{glossaries}
+
+
+%------------------- Titles configuration --------------------------
+\renewcommand{\thesection}{\thechapter.\arabic{section}}
+%----------------------------------------------------------
+
+%------------------- Figures configuration --------------------------
+% Resetting the figure counter at the end of a chapter and using chapter number
+\counterwithin{figure}{chapter}
+%----------------------------------------------------------
+
+%--------------------- General look and feel----------------------------------
+% Remove paragraph indentation
+%\setlength\parindent{0pt}
+% Increase paragraph spacing
+%\setlength{\parskip}{\baselineskip /2}
+\setlength{\parskip}{8pt plus 1pt minus 1pt}
+\setlength{\parindent}{0cm}
+\linespread{1.25}
+% Making sure that indentation is correct for paragraphs inside a list
+\setitemize{listparindent=\parindent}
+\setenumerate{listparindent=\parindent}
+%------------------------------------------------------------------------------------------------
+
+%------------------------------------------------------------------------------------------------
+
+
+% Make sure that subsections are center aligned.
+\makeatletter
+    \def\subsection{\@startsection{subsection}{2}%
+      \z@{.5\linespacing\@plus.7\linespacing}{.25\linespacing}%
+      {\normalfont\bfseries\centering}}
+\makeatother
+
+% Making the subsubsection style look like subsection style.
+\makeatletter
+\def\subsubsection{\@startsection{subsubsection}{3}%
+  \normalparindent{.5\linespacing\@plus.7\linespacing}{-.5em}%
+  {\normalfont\bfseries}}
+\makeatother
+
+%------------------------------------------------------------------------------------------------
+
+
+%------------------- listings configuration ------------------------------------------------------
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{ %
+  language=Matlab,                % the language of the code
+  basicstyle=\tiny,       % the size of the fonts that are used for the code
+  numbers=left,                   % where to put the line-numbers
+  numberstyle=\tiny\color{gray},  % the style that is used for the line-numbers
+  stepnumber=2,                   % the step between two line-numbers. If it's 1, each line 
+                                  % will be numbered
+  numbersep=5pt,                  % how far the line-numbers are from the code
+  backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+  showspaces=false,               % show spaces adding particular underscores
+  showstringspaces=false,         % underline spaces within strings
+  showtabs=false,                 % show tabs within strings adding particular underscores
+  frame=single,                   % adds a frame around the code
+  rulecolor=\color{black},        % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
+  tabsize=2,                      % sets default tabsize to 2 spaces
+  captionpos=b,                   % sets the caption-position to bottom
+  breaklines=true,                % sets automatic line breaking
+  breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+  title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                  % also try caption instead of title
+  keywordstyle=\color{blue},      % keyword style
+  commentstyle=\color{dkgreen},   % comment style
+  stringstyle=\color{mauve},      % string literal style
+  escapeinside={\%*}{*)},         % if you want to add LaTeX within your code
+  morekeywords={*,...},           % if you want to add more keywords to the set
+  deletekeywords={...}            % if you want to delete keywords from the given language
+}
+
+
+%------------------------------------------------------------------------------------------------
+
+
+%-----------------------------------------Theorem Environments-------------------------------------------------------
+\declaretheoremstyle[
+    headfont=\bfseries, 
+    notebraces={[}{]},
+    bodyfont=\normalfont,
+    headpunct={},
+    %postheadspace=\newline,
+    %postheadhook={\textcolor{red}{\rule[.6ex]{\linewidth}{0.4pt}}\\},
+    spacebelow=\parsep,
+    spaceabove=\parsep,
+    mdframed={
+        backgroundcolor=AliceBlue, 
+            linecolor=red!30,
+            skipabove=12pt, 
+            innertopmargin=12pt,
+            roundcorner=5pt,
+            outerlinewidth=1pt,
+            outerlinecolor=Plum, 
+            innerbottommargin=6pt, 
+            skipbelow=\parsep
+            } 
+]{myDefStyle}
+
+
+\declaretheoremstyle[
+    headfont=\bfseries, 
+    notebraces={[}{]},
+    bodyfont=\normalfont\itshape,
+    headpunct={},
+    %postheadspace=\newline,
+    %postheadhook={\textcolor{red}{\rule[.6ex]{\linewidth}{0.4pt}}\\},
+    spacebelow=\parsep,
+    spaceabove=\parsep,
+    mdframed={
+        backgroundcolor=GhostWhite, 
+            linecolor=red!30,
+            skipabove=12pt, 
+            innertopmargin=12pt,
+            roundcorner=5pt,
+            outerlinewidth=1pt,
+            outerlinecolor=Plum, 
+            innerbottommargin=6pt, 
+            skipbelow=\parsep
+            } 
+]{myThmStyle}
+
+
+\declaretheoremstyle[
+  spaceabove=6pt, 
+  spacebelow=6pt,
+  headfont=\normalfont\bfseries,
+  notefont=\mdseries, 
+  notebraces={(}{)},
+  bodyfont=\normalfont,
+  postheadspace=1em%,
+  %numberwithin=section
+]{exstyle}
+
+
+\theoremstyle{plain}
+\declaretheorem[parent=chapter,
+style=myThmStyle,
+refname={axiom,axioms},
+Refname={Axiom,Axioms}]{axiom}
+
+\declaretheorem[numbered=no, name=Axiom]{axiom*}
+
+\declaretheorem[parent=chapter,
+style=myThmStyle,
+refname={theorem,theorems},
+Refname={Theorem,Theorems}]{theorem}
+
+% lemma will share the same counter as theorem
+\declaretheorem[sibling=theorem,
+style=myThmStyle,
+refname={lemma,lemmas},
+Refname={Lemma,Lemmas}]{lemma}
+\declaretheorem[sibling=theorem,
+style=myThmStyle,
+refname={proposition,propositions},
+Refname={Proposition,Propositions}]{proposition}
+
+\declaretheorem[sibling=theorem,
+shaded={bgcolor=Azure},
+refname={corollary,corollaries},Refname={Corollary,Corollaries}]{corollary}
+
+
+\declaretheorem[style=myDefStyle,
+parent=chapter,refname={definition,definitions},Refname={Definition,Definitions}]{definition}
+
+% Remark will share the same counter as theorem and lemma
+\declaretheorem[style=remark, numbered=no]{remark}
+
+\declaretheorem[style=myDefStyle,
+numbered=no,refname={challenge,challenges},Refname={Challenge,Challenges}]{challenge}
+
+
+\declaretheorem[style=exstyle,
+parent=chapter,
+refname={problem,problems},
+Refname={Problem,Problems}]{problem}
+
+\declaretheoremstyle[
+  spaceabove=6pt, 
+  spacebelow=6pt,
+  headfont=\normalfont\bfseries,
+  notefont=\mdseries, 
+  notebraces={(}{)},
+  bodyfont=\normalfont,
+  postheadspace=1em,
+  headpunct={},
+  qed=$\blacktriangleleft$,
+  numbered=no
+]{solstyle}
+\declaretheorem[style=solstyle]{solution}
+
+% Example environment
+\newcounter{exampleCounter}[chapter]
+\newenvironment{example}[1]
+{
+  \addtocounter{exampleCounter}{1}
+  \begin{trivlist}
+  \item[]{\bf Example \arabic{chapter}.\arabic{exampleCounter}: \bfseries #1}
+}
+{
+  \qed 
+  \end{trivlist}
+}
+
+% Solution environment
+\newenvironment{soln}
+{
+  \begin{trivlist}
+  \item[]{\bf Solution:}
+}
+{
+  \qed 
+  \end{trivlist}
+}
+                      
+% Solution Sktech environment
+\newenvironment{solsketch}
+{
+  \begin{trivlist}
+  \item[]{\bf Solution Sketch:}
+}          
+{
+  \qed \end{trivlist}
+}
+        
+
+
+\mdfdefinestyle{mdframed_convex_progarm}{%
+rightline=true,innerleftmargin=10,innerrightmargin=10,
+frametitlerule=true,frametitlerulecolor=green,
+frametitlebackgroundcolor=yellow,
+frametitlerulewidth=2pt}
+
+
+\NewEnviron{killcontents}{}% Useful for killing contents
+
+
+              
+%------------------------------------------------------------------------------------------------
+
+
