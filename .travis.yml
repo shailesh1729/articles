@@ -1,5 +1,6 @@
+sudo: required
 before_install:
-- "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng"
+- sudo apt-get -qq update && sudo apt-get install -y --no-install-recommends texlive-full
 script:
 - mkdir _build
 - pdflatex -output-directory _build dummy/dummy.tex
@@ -12,3 +13,8 @@ deploy:
   skip_cleanup: true
   on:
     tags: true
+
+# This is a comment
+# This command has been removed for now.
+#- "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng"
+
