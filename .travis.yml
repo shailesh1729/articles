@@ -1,0 +1,14 @@
+before_install:
+- "sudo apt-get update && sudo apt-get install --no-install-recommends texlive-fonts-recommended texlive-latex-extra texlive-fonts-extra texlive-latex-recommended dvipng"
+script:
+- mkdir _build
+- pdflatex -output-directory _build dummy/dummy.tex
+deploy:
+  provider: releases
+  api_key:
+    secure: [YOUR KEY]
+  file:
+  - _build/dummy.pdf
+  skip_cleanup: true
+  on:
+    tags: true
