@@ -1,0 +1,97 @@
+% internationalization support
+%\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+% Math support
+\usepackage{amsmath}%
+\usepackage{amsthm}%
+\usepackage{amsfonts}%
+\usepackage{amssymb}%
+\usepackage{dsfont}% math font package
+\usepackage{thmtools}%
+\usepackage{multirow}
+\usepackage{blkarray}
+\usepackage{mathpazo} % Use the Palatino font by default
+\usepackage{skmath}
+
+% Workflow support
+\usepackage{subfiles}
+\usepackage{xr}
+
+% Graphics support
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+% Disable backward compatibility mode of pgfplots.
+\pgfplotsset{compat=newest}
+\usepackage{pgfplotstable}
+\usepackage{pgf}
+\usetikzlibrary{positioning}
+
+% Miscellaneous 
+\usepackage{comment}
+\usepackage{subcaption}
+\usepackage{chngcntr}
+
+% Algorithms
+\usepackage[boxed, algochapter, figure]{algorithm2e}
+
+
+\usepackage{hyperref}
+\hypersetup{pdfpagemode={UseOutlines},
+    bookmarksopen=true,
+    bookmarksopenlevel=0,
+    hypertexnames=false,
+    colorlinks=true,% Set to false to disable coloring links
+    citecolor=magenta,% The color of citations
+    linkcolor=red,% The color of references to document elements (sections, figures, etc)
+    urlcolor=mdtRed,% The color of hyperlinks (URLs)
+    pdfstartview={FitV},
+    unicode,
+    breaklinks=true,
+}
+
+% If there is an explicit linebreak in a section heading (or anything printed to the pdf-bookmarks), it is replaced by a space
+\pdfstringdefDisableCommands{
+    \let\\\space%
+}
+
+\usepackage[backend=bibtex,style=numeric-comp,natbib=true]{biblatex} 
+
+\addbibresource{sksrrcs.bib} % The filename of the bibliography
+
+% Clever references
+\usepackage{cleveref}
+\crefname{appsec}{Appendix}{Appendices}
+\crefname{algocf}{algorithm}{algorithms}
+\Crefname{algocf}{Algorithm}{Algorithms}
+
+
+%-----------------------------------------Theorem Environments-------------------------------------------------------
+\declaretheorem[parent=chapter,
+refname={theorem,theorems},
+Refname={Theorem,Theorems}]{theorem}
+
+\declaretheorem[parent=chapter,
+refname={definition,definitions},
+Refname={Definition,Definitions}]{definition}
+
+\declaretheorem[parent=chapter, 
+refname={lemma,lemmas},
+Refname={Lemma,Lemmas}]{lemma}
+
+\declaretheorem[parent=chapter,
+refname={proposition,propositions},
+Refname={Proposition,Propositions}]{proposition}
+
+\declaretheorem[parent=chapter,
+refname={corollary,corollaries},
+Refname={Corollary,Corollaries}]{corollary}
+
+\declaretheorem[parent=chapter,
+refname={axiom,axioms},
+Refname={Axiom,Axioms}]{axiom}
+
+\declaretheorem[style=remark, numbered=no]{remark}
+              
+%------------------------------------------------------------------------------------------------
