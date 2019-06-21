@@ -1,0 +1,61 @@
+These notes are meant for keeping record of all the setup needed to make
+LaTeX work correctly. 
+
+// Full insallation of texlive
+
+$sudo add-apt-repository ppa:jonathonf/texlive-2016
+$sudo apt update
+$sudo apt install texlive-full
+$sudo apt upgrade
+$sudo apt install -y texlive-latex-recommended
+$sudo apt install -y texlive-math-extra
+
+
+// Running PDF latex non stop
+pdflatex -interaction=nonstopmode -halt-on-error *.tex
+
+
+
+//Important textlive components
+texlive-base 
+texlive-latex-base 
+texlive-latex-extra 
+texlive-latex-recommended (beamer, mathtools,listings, )
+texlive-fonts-recommended texlive-fonts-extra
+texlive texlive-latex-extra 
+texlive-math-extra (virtual package, included in texlive-science)
+texlive-pstricks 
+texlive-science (amstex, algorithm2e)
+latex-beamer
+texlive-pictures (has tikz)
+
+///// Additional packages
+They are managed through tlmgr
+// updating the tlmgr
+tlmgr update --self
+// installing a package
+tlmgr install pkgname
+// updating a package
+tlmgr update <package name>
+// update all packages
+tlmgr update --self --all
+
+// Setting up the TEXMFHOME
+tlmgr conf texmf TEXMFHOME "~/texmf"
+tlmgr conf texmf TEXMFHOME "~/texmf:~/work/articles/texmf"
+// Linking the articles/texmf directory to home
+
+/// Miscellaneous stuff
+sudo apt install -y git
+
+// clean up stuff
+sudo apt-get clean
+sudo apt-get autoremove --purge
+
+
+References:
+* http://chrisstrelioff.ws/sandbox/2016/10/31/install_tex_live_2016_on_ubuntu_16_04.html
+* https://github.com/mcupak/beacon-network-poster-ashg/blob/master/.travis.yml
+* https://mirocupak.com/continuous-integration-for-latex/
+* https://harshjv.github.io/blog/setup-latex-pdf-build-using-travis-ci/
+* https://packages.debian.org/stretch/texlive-latex-recommended

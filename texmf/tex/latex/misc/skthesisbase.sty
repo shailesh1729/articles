@@ -8,7 +8,7 @@
 \usepackage{amsfonts}%
 \usepackage{amssymb}%
 \usepackage{dsfont}% math font package
-\usepackage{thmtools}%
+\usepackage{thmtools, thm-restate}%
 \usepackage{multirow}
 \usepackage{blkarray}
 \usepackage{mathpazo} % Use the Palatino font by default
@@ -16,7 +16,7 @@
 
 % Workflow support
 \usepackage{subfiles}
-\usepackage{xr}
+\usepackage{xr-hyper}
 
 % Graphics support
 \usepackage{graphicx}
@@ -26,15 +26,24 @@
 \pgfplotsset{compat=newest}
 \usepackage{pgfplotstable}
 \usepackage{pgf}
-\usetikzlibrary{positioning}
+\usepgfplotslibrary{units}
+\usetikzlibrary{positioning, shapes, arrows, arrows.meta, chains, calc}
+\usepackage{flowchart}
+\usepackage{tikz-3dplot}
+% Specifies where to look for included images
+%\graphicspath{{images/}{./}}{diagrams/} 
+% captions
+\RequirePackage{caption} % Required for customising the captions
+\captionsetup{justification=justified,font=scriptsize,labelfont=sc,margin=30pt}
+\usepackage[list=true, font=scriptsize]{subcaption}
+% footnotesize, small, scriptsize
 
 % Miscellaneous 
 \usepackage{comment}
-\usepackage{subcaption}
 \usepackage{chngcntr}
 
 % Algorithms
-\usepackage[boxed, algochapter, figure]{algorithm2e}
+\usepackage[boxed, algochapter]{algorithm2e}
 
 
 \usepackage{hyperref}
@@ -84,7 +93,7 @@ Refname={Lemma,Lemmas}]{lemma}
 refname={proposition,propositions},
 Refname={Proposition,Propositions}]{proposition}
 
-\declaretheorem[parent=chapter,
+\declaretheorem[numberlike=theorem,
 refname={corollary,corollaries},
 Refname={Corollary,Corollaries}]{corollary}
 
@@ -92,6 +101,20 @@ Refname={Corollary,Corollaries}]{corollary}
 refname={axiom,axioms},
 Refname={Axiom,Axioms}]{axiom}
 
+
+\declaretheoremstyle[
+bodyfont=\normalfont,
+qed=\qedsymbol
+]{examplestyle}
+
+\declaretheorem[parent=chapter,
+style=examplestyle,
+refname={example,examples},
+Refname={Example,Examples}]{example}
+
 \declaretheorem[style=remark, numbered=no]{remark}
               
 %------------------------------------------------------------------------------------------------
+\newcommand{\newresult}{\tikz \fill[color=red] (0,0) circle[radius=3pt];}
+\newcommand{\upresult}{\tikz \fill[color=blue] (0,0) circle[radius=3pt];}
+\newcommand{\isresult}{\tikz \fill[color=green] (0,0) circle[radius=3pt];}
