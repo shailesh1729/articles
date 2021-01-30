@@ -1,0 +1,22 @@
+% Dependencies
+\usetikzlibrary{arrows, 
+calc, 
+positioning, 
+shapes.symbols, 
+shapes.geometric
+}
+
+\tikzset{
+  % A unit in a perceptron
+  sknn-unit/.style={
+    draw=blue,
+    shape=circle,
+    minimum size=1cm,
+    fill=red!10
+  },
+  pics/sknn-layer-title/.style 2 args={code={
+    \draw [decorate,decoration={brace,amplitude=10pt}] 
+    (-#1, 0) -- (#1, 0) 
+    node [black,midway,yshift=+0.6cm]{#2};
+  }}
+}
