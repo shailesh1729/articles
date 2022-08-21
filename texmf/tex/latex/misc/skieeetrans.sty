@@ -44,7 +44,7 @@
 \usepackage{placeins}
 % toprule midrule
 \usepackage{booktabs}
-\usepackage[justification=centering]{caption}
+% \usepackage[justification=centering]{caption}
 
 % *** SUBFIGURE PACKAGES ***
 %\ifCLASSOPTIONcompsoc
@@ -120,82 +120,8 @@
 %-----------------------------------------Support for making algorithm2e work with IEEEtrans end ------------------------------------------
 
 %-----------------------------------------General math commands start ------------------------------------------
-% Tau
-\newcommand{\Tau}{\mathcal{T}}
-\newcommand{\Chi}{\mathcal{X}}
-\newcommand{\Eta}{\mathcal{H}}
-
 % Spark of a matrix
 \newcommand{\spark}{\mathop{\mathrm{spark}}}
-% Real line symbol
-\newcommand{\RR}{\mathbb{R}}
-\newcommand{\RRMN}{\mathbb{R}^{M \times N}}
-% Complex space symbol
-\newcommand{\CC}{\mathbb{C}}
-% Real part of a complex number
-\renewcommand{\Re}{\operatorname{Re}}
-% Imaginary part of a complex number
-\renewcommand{\Im}{\operatorname{Im}}
-% Natural numbers set symbol
-\newcommand{\Nat}{\mathbb{N}}
-% Integers set symbol
-\newcommand{\ZZ}{\mathbb{Z}}
-% Expectation operator
-\newcommand{\EE}{\mathbb{E}}
-% Probability set symbol
-\newcommand{\PP}{\mathbb{P}}
-% Rational numbers set symbol
-\newcommand{\QQ}{\mathbb{Q}}
-% The set of irrational numbers
-\newcommand{\II}{\mathbb{I}}
-% A field
-\newcommand{\FF}{\mathrm{F}}
-% A vector space
-\newcommand{\VV}{\mathrm{V}}
-% A subspace
-\newcommand{\WW}{\mathrm{W}}
-% A linear operator
-\newcommand{\TT}{\mathrm{T}}
-% Another linear operator
-\newcommand{\UU}{\mathrm{U}}
-% An inner product space
-\newcommand{\XX}{\mathbb{X}}
-
-% A linear operator
-\newcommand{\BB}{\mathbb{B}}
-% A signal dictionary
-\newcommand{\DD}{\mathcal{D}}
-% A Hilbert space
-\newcommand{\HH}{\mathbb{H}}
-
-% All mathcal shortcuts
-% A set of sparse signal representations
-\newcommand{\AAA}{\mathcal{A}}
-\newcommand{\BBB}{\mathcal{B}}
-% A clustering
-\newcommand{\CCC}{\mathcal{C}}
-\newcommand{\DDD}{\mathcal{D}}
-\newcommand{\EEE}{\mathcal{E}}
-\newcommand{\FFF}{\mathcal{F}}
-\newcommand{\GGG}{\mathcal{G}}
-\newcommand{\HHH}{\mathcal{H}}
-\newcommand{\III}{\mathcal{I}}
-% Measurements tuple
-\newcommand{\KKK}{\mathcal{K}}
-\newcommand{\LLL}{\mathcal{L}}
-\newcommand{\MMM}{\mathcal{M}}
-\newcommand{\NNN}{\mathcal{N}}
-% Joint sparsity model
-\newcommand{\PPP}{\mathcal{P}}
-\newcommand{\QQQ}{\mathcal{Q}}
-\newcommand{\TTT}{\mathcal{T}}
-\newcommand{\XXX}{\mathcal{X}}
-\newcommand{\UUU}{\mathcal{U}}
-\newcommand{\VVV}{\mathcal{V}}
-\newcommand{\WWW}{\mathcal{W}}
-\newcommand{\ZZZ}{\mathcal{Z}}
-
-
 % Space of linear transformations
 \newcommand{\LinTSpace}{\mathcal{L}}
 
@@ -313,6 +239,272 @@
 
 
 \setcounter{MaxMatrixCols}{30}
+
+
+
+% \newcommand{\AA}{\mathbb{A}}
+% A linear operator
+\newcommand{\BB}{\mathbb{B}}
+% Complex space symbol
+\newcommand{\CC}{\mathbb{C}}
+\newcommand{\DD}{\mathbb{D}}
+% Expectation operator
+\newcommand{\EE}{\mathbb{E}}
+% A field
+\newcommand{\FF}{\mathbb{F}}
+\newcommand{\GG}{\mathbb{G}}
+% A Hilbert space
+\newcommand{\HH}{\mathbb{H}}
+% The set of irrational numbers
+\newcommand{\II}{\mathbb{I}}
+\newcommand{\JJ}{\mathbb{J}}
+\newcommand{\KK}{\mathbb{K}}
+\newcommand{\LL}{\mathbb{L}}
+\newcommand{\MM}{\mathbb{M}}
+% Natural numbers set symbol
+\newcommand{\NN}{\mathbb{N}}
+% Natural numbers set symbol
+\newcommand{\Nat}{\mathbb{N}}
+% Probability set symbol
+\newcommand{\PP}{\mathbb{P}}
+% Rational numbers set symbol
+\newcommand{\QQ}{\mathbb{Q}}
+% Real line symbol
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\RRMN}{\mathbb{R}^{M \times N}}
+% \newcommand{\SS}{\mathbb{S}}
+% A linear operator
+\newcommand{\TT}{\mathbb{T}}
+% Another linear operator
+\newcommand{\UU}{\mathbb{U}}
+% A vector space
+\newcommand{\VV}{\mathbb{V}}
+% A subspace
+\newcommand{\WW}{\mathbb{W}}
+% An inner product space
+\newcommand{\XX}{\mathbb{X}}
+\newcommand{\YY}{\mathbb{Y}}
+% Integers set symbol
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\ZERO}{\mathbf{O}}
+% Extended real line
+\newcommand{\ERL}{\overline{\mathbb{R}}}
+\newcommand{\RERL}{(-\infty, \infty]}
+\newcommand{\LERL}{[-\infty, \infty)}
+
+% All mathcal shortcuts
+% A set of sparse signal representations
+\newcommand{\AAA}{\mathcal{A}}
+\newcommand{\BBB}{\mathcal{B}}
+\newcommand{\CCC}{\mathcal{C}}
+% A clustering
+\newcommand{\DDD}{\mathcal{D}}
+\newcommand{\EEE}{\mathcal{E}}
+\newcommand{\FFF}{\mathcal{F}}
+\newcommand{\GGG}{\mathcal{G}}
+\newcommand{\HHH}{\mathcal{H}}
+\newcommand{\III}{\mathcal{I}}
+\newcommand{\JJJ}{\mathcal{J}}
+% Measurements tuple
+\newcommand{\KKK}{\mathcal{K}}
+\newcommand{\LLL}{\mathcal{L}}
+\newcommand{\MMM}{\mathcal{M}}
+\newcommand{\NNN}{\mathcal{N}}
+\newcommand{\OOO}{\mathcal{O}}
+% Joint sparsity model
+\newcommand{\PPP}{\mathcal{P}}
+\newcommand{\QQQ}{\mathcal{Q}}
+\newcommand{\RRR}{\mathcal{R}}
+\newcommand{\SSS}{\mathcal{S}}
+\newcommand{\TTT}{\mathcal{T}}
+\newcommand{\UUU}{\mathcal{U}}
+\newcommand{\VVV}{\mathcal{V}}
+\newcommand{\WWW}{\mathcal{W}}
+\newcommand{\XXX}{\mathcal{X}}
+\newcommand{\YYY}{\mathcal{Y}}
+\newcommand{\ZZZ}{\mathcal{Z}}
+\newcommand{\Tau}{\mathcal{T}}
+\newcommand{\Chi}{\mathcal{X}}
+\newcommand{\Eta}{\mathcal{H}}
+% Real part of a complex number
+% \newcommand{\Re}{\operatorname{Re}}
+% Imaginary part of a complex number
+% \newcommand{\Im}{\operatorname{Im}}
+\newcommand{\diag}{\mathrm{diag}}
+% Signum function
+% \newcommand{\sgn}{\mathrm{sgn}}
+% Domain function
+\newcommand{\dom}{\mathrm{dom}\,}
+\newcommand{\range}{\mathrm{range}\,}
+\newcommand{\image}{\mathrm{im}\,}
+\newcommand{\nullspace}{\mathrm{null}\,}
+% Epigraph
+\newcommand{\epi}{\mathrm{epi}\,}
+% Hypograph
+\newcommand{\hypo}{\mathrm{hypo}\,}
+% Sublevel set
+\newcommand{\sublevel}{\mathrm{sublevel}}
+% Superlevel set
+\newcommand{\superlevel}{\mathrm{superlevel}}
+% Level set / Contour
+\newcommand{\contour}{\mathrm{contour}}
+% Distance function
+\newcommand{\dist}{\mathrm{dist}}
+% Similarity function
+\newcommand{\simf}{\mathrm{sim}}
+% Optimum/optimal value
+\newcommand{\opt}{\mathrm{opt}}
+% SNR 
+\newcommand{\SNR}{\mathrm{SNR}}
+% Reconstruction or Recovery SNR 
+\newcommand{\RSNR}{\mbox{R-SNR}}
+% Symmetric group
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\id}{\mathrm{id}}
+% Machine learning related stuff
+% ML
+\newcommand{\precision}{\mathrm{precision}}
+\newcommand{\recall}{\mathrm{recall}}
+\newcommand{\ML}{\mathbf{ML}}
+\newcommand{\MLE}{\mathbf{MLE}}
+\newcommand{\mah}{\mathbf{mah}}
+\newcommand{\chord}{\mathbf{chord}}
+\newcommand{\geo}{\mathbf{geo}}
+\newcommand{\nn}{\mathbf{nn}}
+\newcommand{\fn}{\mathbf{fn}}
+\newcommand{\ave}{\mathbf{ave}}
+\newcommand{\stat}{\mathbf{stat}}
+\newcommand{\mean}{\mathbf{mean}}
+\newcommand{\median}{\mathbf{median}}
+\newcommand{\mode}{\mathbf{mode}}
+% error function
+\newcommand{\erf}{\mathop{\mathrm{erf}}}
+% complementary error function
+\newcommand{\erfc}{\mathop{\mathrm{erfc}}}
+% Conic hull of a set
+\newcommand{\ConicHull}{\mathop{\mathrm{cone}}}
+% Set theory related stuff
+\newcommand{\argmin}{\mathrm{arg}\,\mathrm{min}}
+\newcommand{\argmax}{\mathrm{arg}\,\mathrm{max}}
+\newcommand{\card}{\mathrm{card}\,}
+% such that
+\newcommand{\ST}{\: | \:}
+% Sparse representations related stuff
+% infimal operator
+\newcommand{\infimal}{\;\square\;}
+% Topology related stuff
+\newcommand{\interior}{\mathrm{int}\,}
+\newcommand{\closure}{\mathrm{cl}\,}
+\newcommand{\boundary}{\mathrm{bd}\,}
+\newcommand{\frontier}{\mathrm{fr}\,}
+\newcommand{\diam}{\mathrm{diam}\,}
+\newcommand{\relint}{\mathrm{ri}\,}
+\newcommand{\relbd}{\mathrm{relbd}\,}
+\newcommand{\extreme}{\mathrm{ext}\,}
+\newcommand{\affine}{\mathrm{aff}\,}
+\newcommand{\cone}{\mathrm{cone}\,}
+\newcommand{\convex}{\mathrm{conv}\,}
+\newcommand{\graph}{\mathrm{gra}\,}
+\newcommand{\kernel}{\mathrm{ker}\,}
+\newcommand{\codim}{\mathrm{codim}\,}
+\newcommand{\nullity}{\mathrm{nullity}\,}
+\newcommand{\rank}{\mathrm{rank}\,}
+\newcommand{\prox}{\mathrm{prox}}
+\newcommand{\best}{\mathrm{best}}
+\newcommand{\ainterior}{\mathrm{int}}
+\newcommand{\aclosure}{\mathrm{cl}}
+\newcommand{\aboundary}{\mathrm{bd}}
+\newcommand{\afrontier}{\mathrm{fr}}
+\newcommand{\aextreme}{\mathrm{ext}}
+% Thresholding operators
+\newcommand{\st}{\mathrm{ST}}
+
+% boldface letters
+\newcommand{\bzero}{\mathbf{0}}
+\newcommand{\bone}{\mathbf{1}}
+\newcommand{\ba}{\mathbf{a}}
+\newcommand{\bb}{\mathbf{b}}
+\newcommand{\bc}{\mathbf{c}}
+\newcommand{\bd}{\mathbf{d}}
+\newcommand{\be}{\mathbf{e}}
+\newcommand{\bg}{\mathbf{g}}
+\newcommand{\bh}{\mathbf{h}}
+\newcommand{\bi}{\mathbf{i}}
+\newcommand{\bj}{\mathbf{j}}
+\newcommand{\bk}{\mathbf{k}}
+\newcommand{\bl}{\mathbf{l}}
+\newcommand{\bm}{\mathbf{m}}
+\newcommand{\bn}{\mathbf{n}}
+\newcommand{\bo}{\mathbf{o}}
+\newcommand{\bp}{\mathbf{p}}
+\newcommand{\bq}{\mathbf{q}}
+\newcommand{\br}{\mathbf{r}}
+\newcommand{\bs}{\mathbf{s}}
+\newcommand{\bt}{\mathbf{t}}
+\newcommand{\bu}{\mathbf{u}}
+\newcommand{\bv}{\mathbf{v}}
+\newcommand{\bw}{\mathbf{w}}
+\newcommand{\bx}{\mathbf{x}}
+\newcommand{\by}{\mathbf{y}}
+\newcommand{\bz}{\mathbf{z}}
+\newcommand{\bA}{\mathbf{A}}
+\newcommand{\bB}{\mathbf{B}}
+\newcommand{\bC}{\mathbf{C}}
+\newcommand{\bD}{\mathbf{D}}
+\newcommand{\bE}{\mathbf{E}}
+\newcommand{\bF}{\mathbf{F}}
+\newcommand{\bG}{\mathbf{G}}
+\newcommand{\bH}{\mathbf{H}}
+\newcommand{\bI}{\mathbf{I}}
+\newcommand{\bJ}{\mathbf{J}}
+\newcommand{\bK}{\mathbf{K}}
+\newcommand{\bL}{\mathbf{L}}
+\newcommand{\bM}{\mathbf{M}}
+\newcommand{\bN}{\mathbf{N}}
+\newcommand{\bO}{\mathbf{O}}
+\newcommand{\bP}{\mathbf{P}}
+\newcommand{\bQ}{\mathbf{Q}}
+\newcommand{\bR}{\mathbf{R}}
+\newcommand{\bS}{\mathbf{S}}
+\newcommand{\bT}{\mathbf{T}}
+\newcommand{\bU}{\mathbf{U}}
+\newcommand{\bV}{\mathbf{V}}
+\newcommand{\bW}{\mathbf{W}}
+\newcommand{\bX}{\mathbf{X}}
+\newcommand{\bY}{\mathbf{Y}}
+\newcommand{\bZ}{\mathbf{Z}}
+% Bold mathcal shortcuts
+\newcommand{\bAAA}{\mathbf{\mathcal{A}}}
+\newcommand{\bBBB}{\mathbf{\mathcal{B}}}
+\newcommand{\bCCC}{\mathbf{\mathcal{C}}}
+\newcommand{\bDDD}{\mathbf{\mathcal{D}}}
+\newcommand{\bEEE}{\mathbf{\mathcal{E}}}
+\newcommand{\bFFF}{\mathbf{\mathcal{F}}}
+\newcommand{\bGGG}{\mathbf{\mathcal{G}}}
+\newcommand{\bHHH}{\mathbf{\mathcal{H}}}
+\newcommand{\bIII}{\mathbf{\mathcal{I}}}
+\newcommand{\bJJJ}{\mathbf{\mathcal{J}}}
+\newcommand{\bKKK}{\mathbf{\mathcal{K}}}
+\newcommand{\bLLL}{\mathbf{\mathcal{L}}}
+\newcommand{\bMMM}{\mathbf{\mathcal{M}}}
+\newcommand{\bNNN}{\mathbf{\mathcal{N}}}
+\newcommand{\bOOO}{\mathbf{\mathcal{O}}}
+\newcommand{\bPPP}{\mathbf{\mathcal{P}}}
+\newcommand{\bQQQ}{\mathbf{\mathcal{Q}}}
+\newcommand{\bRRR}{\mathbf{\mathcal{R}}}
+\newcommand{\bSSS}{\mathbf{\mathcal{S}}}
+\newcommand{\bTTT}{\mathbf{\mathcal{T}}}
+\newcommand{\bUUU}{\mathbf{\mathcal{U}}}
+\newcommand{\bVVV}{\mathbf{\mathcal{V}}}
+\newcommand{\bWWW}{\mathbf{\mathcal{W}}}
+\newcommand{\bXXX}{\mathbf{\mathcal{X}}}
+\newcommand{\bYYY}{\mathbf{\mathcal{Y}}}
+\newcommand{\bZZZ}{\mathbf{\mathcal{Z}}}
+% Bold Greek letters
+\newcommand{\blambda}{\pmb{\lambda}}
+
+
+
 %-----------------------------------------General math commands end ------------------------------------------
 
 
