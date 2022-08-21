@@ -6,6 +6,16 @@ shapes.symbols,
 shapes.geometric
 }
 
+\definecolor{SkColorFC}{HTML}{1E90FF}
+\definecolor{SkColorH}{HTML}{228B22}
+\definecolor{SkColorBias}{HTML}{87CEFA}
+\definecolor{SkColorNoise}{HTML}{8B008B}
+\definecolor{SkColorConv}{HTML}{FFA500}
+\definecolor{SkColorPool}{HTML}{B22222}
+\definecolor{SkColorUp}{HTML}{B22222}
+\definecolor{SkColorView}{HTML}{FFFFFF}
+\definecolor{SkColorBn}{HTML}{FFD700}
+
 \tikzset{
   % A unit in a perceptron
   sknn-unit/.style={
@@ -14,9 +24,23 @@ shapes.geometric
     minimum size=1cm,
     fill=red!10
   },
+  sknn-invisible-unit/.style={
+    shape=circle,
+    minimum size=1cm,
+  },
   pics/sknn-layer-title/.style 2 args={code={
     \draw [decorate,decoration={brace,amplitude=10pt}] 
     (-#1, 0) -- (#1, 0) 
     node [black,midway,yshift=+0.6cm]{#2};
   }}
 }
+
+\tikzset{sknn fc/.style={black,draw=black,fill=SkColorFC,rectangle}}
+\tikzset{sknn h/.style={black,draw=black,fill=SkColorH,rectangle}}
+\tikzset{sknn bias/.style={black,draw=black,fill=SkColorBias,rectangle}}
+\tikzset{sknn noise/.style={black,draw=black,fill=SkColorNoise,rectangle}}
+\tikzset{sknn conv/.style={black,draw=black,fill=SkColorConv,rectangle}}
+\tikzset{sknn pool/.style={black,draw=black,fill=SkColorPool,rectangle}}
+\tikzset{sknn up/.style={black,draw=black,fill=SkColorUp,rectangle}}
+\tikzset{sknn view/.style={black,draw=black,fill=SkColorView,rectangle}}
+\tikzset{sknn bn/.style={black,draw=black,fill=SkColorBn,rectangle}}
